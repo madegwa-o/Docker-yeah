@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/img/img.png" type="image/png">
+    <title>Docker-Yeahh</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<h1 class="title">Docker-Yeahh</h1>
+
+<div class="count">
+    <p>name: <span th:text="${userName}">Anonymous</span></p>
+    <p>Likes: <span id="countDisplay">0</span></p>
+</div>
+
+<div class="main">
+    <h1>Project Docker</h1>
+    <div class="container">
+        <p id="increment"><img src="/img/like.svg" alt="Like Icon" class="icon"> Like</p>
+        <p id="decrement"><img src="/img/dislike.svg" alt="Dislike Icon" class="icon"> Dislike</p>
+    </div>
+    <div class="sender">
+        <form th:action="@{/search}" method="post">
+            <input class="input" type="number" name="userId" placeholder="Enter User ID">
+            <button class="button" type="submit">Send</button>
+        </form>
+    </div>
+</div>
+<script src="/js/main.js"></script>
+</body>
+</html>
